@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="BakeryManager.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head runat="server">
+    <title>J Fortune Bakery</title>
+    <link rel="stylesheet" href="Styles/MainStyle.css" type="text/css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    
+    
+
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <div id="wrapper">
+            
+            <div id="banner">
+                <img id="banner_image" runat="server" src="Images/fruits-dessert-header.jpg"/>
+            </div>
+            
+            <div id="navigation">
+                
+                 <ul id="nav">
+                       <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Index.aspx">Menu</asp:HyperLink></li>
+                       <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Pages/About.aspx">About</asp:HyperLink></li>
+                       <li><asp:HyperLink ID="HyperLink3" runat="server">Contact</asp:HyperLink></li>
+                       <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Pages/DBManagement/ManageDB.aspx">Manage</asp:HyperLink></li>
+                        
+                        <li style="float:right">
+                            <asp:HyperLink ID="lnkRegister" NavigateUrl="Pages/AccountManagement/Register.aspx" runat="server">Register</asp:HyperLink>
+                            <asp:HyperLink ID="litStatus" runat="server"></asp:HyperLink>
+                        </li>
+                     
+                        <li style="float:right">
+                            <asp:HyperLink ID="lnkLogin" NavigateUrl="Pages/AccountManagement/Login.aspx" runat="server">Log In</asp:HyperLink>
+                            <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click">Log Out</asp:LinkButton>
+                        </li>
+                </ul>
+                   
+            </div>
+
+            <div id="content">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        
+        
+
+       
+    </div>
+    </form>
+</body>
+</html>
